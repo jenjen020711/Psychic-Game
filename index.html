@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Psychic Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </head>
 
 <body>
     <h1>The Psychic Game</h1>
     <p>Guess what letter I'm thinking of</p>
 
-  
+ <script type="text/javascript">
+
+        document.onkeyup = function () {
+            var userguess = String.fromCharCode (event.keyCode).
+            to LowerCase();
+
+            console.log(userguess);
+
+            var computerguess = options[Math.floor{Math.random}()*options.length)];
+
+            console.log(computerguess);
+
+
+            if userguess = computerguess
+            alert ("you win!");
+           
+        } else ("try again!")
+
+        }
+          var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", 
+        "t", "u", "v", "w", "x", "y", "z"];
+    
+    
+</script>
+
     <!--Wins:The number of times the user has guessed correctly.-->
     <p>Wins: <span id="Wins">0</span></p>
 
@@ -29,9 +55,7 @@
 
     <!-- Losses counter:  Increase the losses counter and re-starts the game.-->
 
+    
 
-    <script type="assets/javascript">
-
-        
 </body>
 </html>
