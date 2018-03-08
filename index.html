@@ -5,68 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Psychic Game</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
+    <link rel= "stylesheet" type= "text/css" href="assets/css/reset.css">
+    <link rel= "stylesheet" type= "text/css" href= "assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
 </head>
 
-        
+
 <body>
+    <div class="jumbotron">
+        <h1 class="display-4">The Psychic Game</h1>
+        <p class="lead">Guess What letter I'm thinking of.  Press any letter to start playing!</p>
+            
+    </div>
 
-<div id= "game">
-    <h1>Psychic Game</h1>
-    <p>Guess what letter I'm thinking of</p>
-    
-</div>
+    <div class="game">
+        <p>Total Wins:<span id= "wins"></span> </p>
+        <p>Total Losses: <span id= "losses"></span></p>
+        <p>Guesses Left: <span id= "guessesLeft"></span></p>
+        <p>Your Guesses so far: <span id= "guessesSoFar"></span></p>
+    </div>
 
-    <!--//Wins:The number of times the user has guessed correctly
-        Losses: The number of times the user has failed to guess the letter correctly.
-        Guesses Left:  The number of guess the user has left
-        Guesses So Far:  The specific letters that the user has typed. Display until user either wins or loses 
-        Wins counter increases:  When the player wins, this number ticks up and re-starts game.
-        Losses counter:  Increase the losses counter and re-starts the game.-->
-  
-  <script type="text/javascript">
-   
-    var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var wins= 0;
-    var loss= 0
-    var guessesleft= 0;
-    var guessessofar= 0;
-
-    
-      document.onkeyup = function() {
-        var userguess = String.fromCharCode(event.keyCode). 
-            toLowerCase();
-
-            console.log(userguess);
-
-        var computerGuess = options[Math.floor(Math.random()*options.length)];
-
-            console.log(computerGuess);
-
-        if (userguess==computerGuess) {
-            wins++;
-            guessesleft--;
-            alert("wins: " + wins);
-        }
-
-        else {
-            loss++;
-            alert("loss: " + loss);
-        }
-
-        var html = "<h1>Psychic Game</h1>" +
-        "<p>wins: " + wins + "</p>" +
-        "<p>loss: " + loss + "</p>" +
-        "<p>Guesses Left: " + guessesleft + "</p>"
-        "<p>Guesses so Far: " + guessessofar + "</p>";
-
-        document.querySelector("#game").innerHTML = html;
-        
-           
-        }
-       
-     </script>
+    <script src= "assets/javascript/game.js"></script>
 
 </body>
 </html>
