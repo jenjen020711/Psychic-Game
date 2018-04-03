@@ -1,8 +1,8 @@
 
-//variable to set letters available
+//create variable for the computer choices
 var computerChoices = ["a,", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-//setting all to zero
+//setting all to starting number
 var wins = 0;
 var losses = 0;
 var userGuess = 0;
@@ -20,7 +20,7 @@ function startGame() {
     //resets guesses back to 9
     guessesLeft = 9;
 
-    //updates HTML to reflect reset
+    //updates HTML to reflect reset back to 9
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
 
     //wrong guesses cleared
